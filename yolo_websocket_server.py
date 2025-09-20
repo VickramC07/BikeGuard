@@ -45,6 +45,8 @@ async def send_frames(websocket, *args):
             for box in results[0].boxes:
                 cls_idx = int(box.cls[0])
                 conf = float(box.conf[0])
+                if conf < 0.65:
+                    continue
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
 
                 class_counts[cls_idx] = class_counts.get(cls_idx, 0) + 1
