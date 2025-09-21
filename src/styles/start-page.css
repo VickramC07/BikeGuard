@@ -1,0 +1,89 @@
+.start-shell {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, rgba(97, 210, 255, 0.16), transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(64, 224, 161, 0.14), transparent 50%),
+    var(--bg-primary);
+}
+
+.start-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(97, 210, 255, 0.3), rgba(5, 8, 15, 0));
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.start-card {
+  position: relative;
+  z-index: 1;
+  padding: 4.5rem clamp(2rem, 4vw, 4rem);
+  border-radius: 32px;
+  background: linear-gradient(140deg, rgba(16, 24, 40, 0.78), rgba(5, 8, 15, 0.88));
+  border: 1px solid rgba(97, 210, 255, 0.18);
+  box-shadow: 0 45px 80px rgba(5, 8, 15, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  text-align: center;
+  max-width: 640px;
+}
+
+.start-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: rgba(97, 210, 255, 0.7);
+  margin-bottom: 1.4rem;
+}
+
+.start-title {
+  font-size: clamp(3rem, 8vw, 4.2rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.start-subtitle {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--accent);
+  margin-bottom: 1.1rem;
+  min-height: 2.2rem;
+}
+
+.start-description {
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 2.4rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, #31b0ff, #61d2ff);
+  border-radius: 999px;
+  color: #02050b;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 18px 35px rgba(49, 176, 255, 0.35);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 28px 45px rgba(49, 176, 255, 0.45);
+}
+
+@media (max-width: 640px) {
+  .start-card {
+    padding: 3rem 1.4rem;
+    margin: 0 1rem;
+  }
+}

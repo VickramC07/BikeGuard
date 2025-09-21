@@ -1,0 +1,22 @@
+.loader-shell {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  gap: 1rem;
+}
+
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid rgba(97, 210, 255, 0.25);
+  border-top-color: rgba(97, 210, 255, 0.9);
+  animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
